@@ -1,10 +1,10 @@
-import { Separator } from "./Separator";
-import type { RefProps } from "./types";
+import { Separator } from "../Separator";
+import type { RefProps } from "../types";
 
 export const AboutSection = ({ ref }: RefProps) => {
     return (
         <>
-            <section ref={ref} className="h-screen max-w-[60vw] px-6 py-24">
+            <section ref={ref} className="pt-20 h-screen max-w-[60vw] px-6 py-24">
                 <h2 className="mb-12 text-5xl font-bold text-white">About Me</h2>
 
                 <div className="space-y-10">

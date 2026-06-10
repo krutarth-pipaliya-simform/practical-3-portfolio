@@ -1,8 +1,8 @@
 import type { RefObject } from "react";
-import { AboutSection } from "./AboutSection";
-import { ContactSection } from "./ContactSection";
-import { TechnologiesSection } from "./TechnologiesSection";
-import { ProjectsSection } from "./ProjectsSection";
+import { AboutSection } from "./About/AboutSection";
+import { ContactSection } from "./Contact/ContactSection";
+import { TechnologiesSection } from "./Technologies/TechnologiesSection";
+import { ProjectsSection } from "./Projects/ProjectsSection";
 
 interface MainProps {
     refs: {
@@ -17,7 +17,7 @@ export const Main = ({
     refs: { aboutSectionRef, projectSectionRef, technologiesSectionRef, contactSectionRef },
 }: MainProps) => {
     return (
-        <main className="pt-20">
+        <main>
             <AboutSection ref={aboutSectionRef} />
             <ProjectsSection ref={projectSectionRef} />
             <TechnologiesSection ref={technologiesSectionRef} />
