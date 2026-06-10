@@ -14,8 +14,8 @@ export const WrapperComponent = () => {
 };
 
 const useSectionRefs = () => ({
-    aboutSectionRef: useRef<HTMLElement>(null),
-    projectSectionRef: useRef<HTMLElement>(null),
-    technologiesSectionRef: useRef<HTMLElement>(null),
-    contactSectionRef: useRef<HTMLElement>(null),
+    aboutSectionRef: useRef<HTMLElement | null>(null),
+    projectSectionRef: useRef<HTMLElement | null>(null),
+    technologiesSectionRef: useRef<HTMLElement | null>(null),
+    contactSectionRef: useRef<HTMLElement | null>(null),
 });

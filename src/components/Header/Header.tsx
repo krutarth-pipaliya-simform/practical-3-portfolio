@@ -2,10 +2,10 @@ import type { RefObject } from "react";
 
 interface HeaderProps {
     refs: {
-        aboutSectionRef: RefObject<HTMLElement>;
-        projectSectionRef: RefObject<HTMLElement>;
-        technologiesSectionRef: RefObject<HTMLElement>;
-        contactSectionRef: RefObject<HTMLElement>;
+        aboutSectionRef: RefObject<HTMLElement | null>;
+        projectSectionRef: RefObject<HTMLElement | null>;
+        technologiesSectionRef: RefObject<HTMLElement | null>;
+        contactSectionRef: RefObject<HTMLElement | null>;
     };
 }
 

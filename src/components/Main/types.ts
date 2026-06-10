@@ -1,5 +1,5 @@
 import type { RefObject } from "react";
 
 export interface RefProps {
-    ref: RefObject<HTMLElement>;
+    ref: RefObject<HTMLElement | null>;
 }

@@ -1,4 +1,4 @@
-import type { RefProps } from "./types";
+import type { RefProps } from "../types";
 
 export const ContactSection = ({ ref }: RefProps) => {
     return (
