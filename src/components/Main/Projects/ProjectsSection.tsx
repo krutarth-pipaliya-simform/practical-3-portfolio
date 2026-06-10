@@ -48,7 +48,7 @@ export const ProjectsSection = ({ ref }: RefProps) => {
     return (
         <section
             ref={ref}
-            className="flex flex-col justify-center pt-20 text-white overflow-hidden"
+            className="flex flex-col justify-center px-4 pt-20 text-white overflow-hidden"
         >
             <h2 className="mb-12 text-5xl font-bold">Projects I've made</h2>
             <ul className="grid grid-cols-3 gap-4 ">
