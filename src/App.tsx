@@ -1,5 +1,7 @@
+import { WrapperComponent } from "./components/WrapperComponent";
+
 const App = () => {
-    return <div className="bg-amber-500"> App</div>;
+    return <WrapperComponent />;
 };
 
 export default App;
