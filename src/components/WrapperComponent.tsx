@@ -8,7 +8,7 @@ export const WrapperComponent = () => {
     return (
         <div className="h-100vh flex flex-col">
             <Header refs={refs} />
-            <Main />
+            <Main refs={refs} />
         </div>
     );
 };
