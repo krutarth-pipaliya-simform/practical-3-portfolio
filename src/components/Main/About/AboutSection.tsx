@@ -11,19 +11,20 @@ export const AboutSection = ({ ref }: RefProps) => {
                     <div>
                         <h3 className="mb-3 text-2xl font-semibold text-white">Introduction</h3>
                         <p className="text-lg leading-relaxed text-gray-400">
-                            Hi, I'm Krutarth Pipaliya, a Computer Engineering student who enjoys
-                            building software and solving challenging problems. I am passionate
-                            about web development, software engineering, and creating applications
-                            that deliver great user experiences.
+                            I'm Krutarth Pipaliya, a Computer Engineering graduate who enjoys
+                            building web applications and solving algorithmic problems. I am
+                            passionate about software development and continuously learning new
+                            technologies through projects and hands-on experience.
                         </p>
                     </div>
 
                     <div>
                         <h3 className="mb-3 text-2xl font-semibold text-white">Education</h3>
                         <p className="text-lg leading-relaxed text-gray-400">
-                            Currently pursuing a Bachelor's degree in Computer Engineering, with a
-                            strong focus on data structures, algorithms, software development, and
-                            modern web technologies.
+                            I completed my Bachelor's degree in Computer Engineering from
+                            Vishwakarma Government Engineering College (VGEC), Ahmedabad. My studies
+                            provided a strong foundation in computer science fundamentals, software
+                            development, and problem-solving.
                         </p>
                     </div>
 
@@ -33,8 +34,7 @@ export const AboutSection = ({ ref }: RefProps) => {
                         </h3>
                         <p className="text-lg leading-relaxed text-gray-400">
                             I enjoy competitive programming, building personal projects, exploring
-                            new technologies, and learning how large-scale software systems are
-                            designed and optimized.
+                            new technologies, and learning how software systems work.
                         </p>
                     </div>
                 </div>
