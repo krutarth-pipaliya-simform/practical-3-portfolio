@@ -1,3 +1,3 @@
 export const Separator = () => {
-    return <hr className="border-white/20" />;
+    return <hr className="border-white/20 my-20" />;
 };

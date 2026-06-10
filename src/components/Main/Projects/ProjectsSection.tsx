@@ -1,3 +1,4 @@
+import { Separator } from "../Separator";
 import type { RefProps } from "../types";
 import { Project } from "./Project";
 import type { ProjectData } from "./types";
@@ -46,16 +47,19 @@ const projectsData: Array<ProjectData> = [
 
 export const ProjectsSection = ({ ref }: RefProps) => {
     return (
-        <section
-            ref={ref}
-            className="flex flex-col justify-center px-4 pt-20 text-white overflow-hidden"
-        >
-            <h2 className="mb-12 text-5xl font-bold">Projects I've made</h2>
-            <ul className="grid grid-cols-3 gap-4 ">
-                {projectsData.map((project) => (
-                    <Project key={project.id} project={project} />
-                ))}
-            </ul>
-        </section>
+        <>
+            <section
+                ref={ref}
+                className="flex flex-col justify-center px-4 pt-20 text-white overflow-hidden"
+            >
+                <h2 className="mb-12 text-5xl font-bold">Projects I've made</h2>
+                <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    {projectsData.map((project) => (
+                        <Project key={project.id} project={project} />
+                    ))}
+                </ul>
+            </section>
+            <Separator />
+        </>
     );
 };
