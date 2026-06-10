@@ -6,7 +6,7 @@ import { Main } from "./Main/Main";
 export const WrapperComponent = () => {
     const refs = useSectionRefs();
     return (
-        <div className="h-100vh flex flex-col">
+        <div className="h-100vh flex flex-col bg-black">
             <Header refs={refs} />
             <Main refs={refs} />
         </div>

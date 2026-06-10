@@ -14,7 +14,7 @@ export const Header = ({
 }: HeaderProps) => {
     return (
         <header className="py-1 fixed top-4 z-50 mt-2 self-center w-[60vw] flex justify-center rounded-2xl bg-white/30 backdrop-blur-xs border border-white/30 shadow-xl transition-all duration-300 hover:bg-white/35 hover:shadow-2xl">
-            <nav className="flex gap-8 text-3xl justify-center">
+            <nav className="flex gap-8 text-3xl justify-center text-white">
                 <a
                     onClick={(e) => {
                         e.preventDefault();
