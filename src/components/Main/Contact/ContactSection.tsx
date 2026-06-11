@@ -41,7 +41,7 @@ export const ContactSection = ({ ref }: RefProps) => {
                         id="name"
                         name="name"
                         type="text"
-                        placeholder="John Doe"
+                        required
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
@@ -56,7 +56,8 @@ export const ContactSection = ({ ref }: RefProps) => {
                         id="contact-number"
                         name="contact-number"
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        pattern="[0-9]{10}"
+                        required
                         value={contactNumber}
                         onChange={(e) => setContactNumber(e.target.value)}
                         className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
@@ -71,7 +72,7 @@ export const ContactSection = ({ ref }: RefProps) => {
                         id="email"
                         name="email"
                         type="email"
-                        placeholder="john@example.com"
+                        required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
