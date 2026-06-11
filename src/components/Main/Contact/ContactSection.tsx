@@ -26,46 +26,77 @@ export const ContactSection = ({ ref }: RefProps) => {
     };
 
     return (
-        <section className="text-white flex flex-col pt-20 px-6 py-24" ref={ref}>
+        <section className="relative flex flex-col px-6 py-24 text-white" ref={ref}>
             <form
                 onSubmit={handleSubmit}
-                className="self-center flex flex-col gap-4 rounded-2xl border border-white/20 bg-white/5 p-6 backdrop-blur-xl shadow-[0_8px_32px_rgba(255,255,255,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-white/40 hover:bg-white/10 hover:shadow-[0_12px_40px_rgba(255,255,255,0.15)]"
+                className="relative mx-auto flex w-full max-w-xl flex-col gap-5 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-[0_8px_32px_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_12px_40px_rgba(255,255,255,0.12)]"
             >
-                <h2 className="mx-auto mb-12 text-5xl font-bold text-white">Contact Me!</h2>
-                <label htmlFor="name">Name</label>
-                <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                />
-                <label htmlFor="contact-number">Contact Number</label>
-                <input
-                    id="contact-number"
-                    name="contact-number"
-                    type="tel"
-                    value={contactNumber}
-                    onChange={(e) => setContactNumber(e.target.value)}
-                />
-                <label htmlFor="email">Email</label>
-                <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <label htmlFor="message">Message me</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="How can I help you?"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                />
-                <button className="cursor-pointer" type="submit">
-                    Send message
+                <h2 className="mb-8 text-center text-5xl font-bold tracking-tight">Contact Me</h2>
+
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="name" className="text-sm font-medium text-white/80">
+                        Name
+                    </label>
+                    <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="John Doe"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="contact-number" className="text-sm font-medium text-white/80">
+                        Contact Number
+                    </label>
+                    <input
+                        id="contact-number"
+                        name="contact-number"
+                        type="tel"
+                        placeholder="+91 98765 43210"
+                        value={contactNumber}
+                        onChange={(e) => setContactNumber(e.target.value)}
+                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="email" className="text-sm font-medium text-white/80">
+                        Email
+                    </label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="john@example.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-2">
+                    <label htmlFor="message" className="text-sm font-medium text-white/80">
+                        Message
+                    </label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="How can I help you?"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        className="min-h-36 resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                    />
+                </div>
+
+                <button
+                    type="submit"
+                    className="mt-4 cursor-pointer rounded-xl bg-white px-6 py-3 font-semibold text-black transition-all duration-300 hover:scale-[1.02] hover:bg-white/90 active:scale-[0.98]"
+                >
+                    Send Message
                 </button>
             </form>
         </section>
