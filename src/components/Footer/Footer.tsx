@@ -6,7 +6,7 @@ import { MdEmail, MdWork } from "react-icons/md";
 
 export const Footer = () => {
     return (
-        <footer className="mt-20 border-t border-white/10 px-6 py-8 text-white">
+        <footer className="px-6 py-8 text-white">
             <div className="mx-auto flex max-w-5xl flex-col items-center gap-6">
                 <div className="text-center">
                     <h3 className="text-lg font-semibold">Krutarth Pipaliya</h3>

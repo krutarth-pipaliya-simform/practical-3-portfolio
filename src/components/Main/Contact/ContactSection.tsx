@@ -2,6 +2,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import type { RefProps } from "../types";
+import { Separator } from "../Separator";
 
 export const ContactSection = ({ ref }: RefProps) => {
     const [name, setName] = useState<string>("");
@@ -26,80 +27,88 @@ export const ContactSection = ({ ref }: RefProps) => {
     };
 
     return (
-        <section className="relative flex flex-col px-6 py-24 text-white" ref={ref}>
-            <form
-                onSubmit={handleSubmit}
-                className="relative mx-auto flex w-full max-w-xl flex-col gap-5 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-[0_8px_32px_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_12px_40px_rgba(255,255,255,0.12)]"
-            >
-                <h2 className="mb-8 text-center text-5xl font-bold tracking-tight">Contact Me</h2>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="name" className="text-sm font-medium text-white/80">
-                        Name
-                    </label>
-                    <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        required
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
-                    />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-number" className="text-sm font-medium text-white/80">
-                        Contact Number
-                    </label>
-                    <input
-                        id="contact-number"
-                        name="contact-number"
-                        type="tel"
-                        pattern="[0-9]{10}"
-                        required
-                        value={contactNumber}
-                        onChange={(e) => setContactNumber(e.target.value)}
-                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
-                    />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="email" className="text-sm font-medium text-white/80">
-                        Email
-                    </label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
-                    />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                    <label htmlFor="message" className="text-sm font-medium text-white/80">
-                        Message
-                    </label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        placeholder="How can I help you?"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        className="min-h-36 resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
-                    />
-                </div>
-
-                <button
-                    type="submit"
-                    className="mt-4 cursor-pointer rounded-xl bg-white px-6 py-3 font-semibold text-black transition-all duration-300 hover:scale-[1.02] hover:bg-white/90 active:scale-[0.98]"
+        <>
+            <section className="relative flex flex-col px-6 py-24 text-white" ref={ref}>
+                <form
+                    onSubmit={handleSubmit}
+                    className="relative mx-auto flex w-full max-w-xl flex-col gap-5 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-[0_8px_32px_rgba(255,255,255,0.08)] transition-all duration-300 hover:border-white/20 hover:shadow-[0_12px_40px_rgba(255,255,255,0.12)]"
                 >
-                    Send Message
-                </button>
-            </form>
-        </section>
+                    <h2 className="mb-8 text-center text-5xl font-bold tracking-tight">
+                        Contact Me
+                    </h2>
+
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="name" className="text-sm font-medium text-white/80">
+                            Name
+                        </label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            required
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                        />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        <label
+                            htmlFor="contact-number"
+                            className="text-sm font-medium text-white/80"
+                        >
+                            Contact Number
+                        </label>
+                        <input
+                            id="contact-number"
+                            name="contact-number"
+                            type="tel"
+                            pattern="[0-9]{10}"
+                            required
+                            value={contactNumber}
+                            onChange={(e) => setContactNumber(e.target.value)}
+                            className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                        />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="email" className="text-sm font-medium text-white/80">
+                            Email
+                        </label>
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                        />
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                        <label htmlFor="message" className="text-sm font-medium text-white/80">
+                            Message
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="How can I help you?"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            className="min-h-36 resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition-all duration-300 placeholder:text-white/40 focus:border-white/40 focus:bg-white/10"
+                        />
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="mt-4 cursor-pointer rounded-xl bg-white px-6 py-3 font-semibold text-black transition-all duration-300 hover:scale-[1.02] hover:bg-white/90 active:scale-[0.98]"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </section>
+            <Separator />
+        </>
     );
 };
