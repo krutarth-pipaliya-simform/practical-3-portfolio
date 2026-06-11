@@ -2,6 +2,7 @@ import { useRef } from "react";
 
 import { Header } from "./Header/Header";
 import { Main } from "./Main/Main";
+import { Footer } from "./Footer/Footer";
 
 export const WrapperComponent = () => {
     const refs = useSectionRefs();
@@ -9,6 +10,7 @@ export const WrapperComponent = () => {
         <div className="h-100vh flex flex-col bg-black">
             <Header refs={refs} />
             <Main refs={refs} />
+            <Footer />
         </div>
     );
 };
