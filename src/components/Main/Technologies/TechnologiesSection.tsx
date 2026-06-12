@@ -1,7 +1,7 @@
 import { Separator } from "../Separator";
 import type { RefProps } from "../types";
 import { technologies } from "./technologiesData";
-import { TechnologyCard } from "./TochnologyCard";
+import { TechnologyCard } from "./TechnologyCard";
 
 export const TechnologiesSection = ({ ref }: RefProps) => {
     return (
