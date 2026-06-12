@@ -10,6 +10,10 @@ export const ContactSection = ({ ref }: RefProps) => {
     const [email, setEmail] = useState<string>("");
     const [message, setMessage] = useState<string>("");
 
+    // DUBUG
+    console.log(import.meta.env);
+    console.log(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+
     const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
