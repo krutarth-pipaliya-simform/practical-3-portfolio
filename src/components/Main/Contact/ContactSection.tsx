@@ -14,13 +14,12 @@ export const ContactSection = ({ ref }: RefProps) => {
         e.preventDefault();
         try {
             await emailjs.send(
-                "service_qu6atgc",
-                "template_6g7cm06",
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 { name, email, message, contactNumber },
-                "LSw_i6Wzx7NlEc2ae",
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
             );
             alert("Your Message has been sent to me, will reach you out ASAP.");
-            console.log("Sent");
         } catch (err) {
             console.error(err);
         }

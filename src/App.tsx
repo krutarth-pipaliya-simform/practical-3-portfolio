@@ -1,7 +1,7 @@
-import { WrapperComponent } from "./components/WrapperComponent";
+import { Layout } from "./components/Layout";
 
 const App = () => {
-    return <WrapperComponent />;
+    return <Layout />;
 };
 
 export default App;

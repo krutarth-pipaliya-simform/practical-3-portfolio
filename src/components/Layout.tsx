@@ -4,7 +4,7 @@ import { Header } from "./Header/Header";
 import { Main } from "./Main/Main";
 import { Footer } from "./Footer/Footer";
 
-export const WrapperComponent = () => {
+export const Layout = () => {
     const refs = useSectionRefs();
     return (
         <div className="h-100vh flex flex-col bg-black">
