@@ -1,0 +1,40 @@
+import {
+    SiTypescript,
+    SiJavascript,
+    SiReact,
+    SiRedux,
+    SiNodedotjs,
+    SiExpress,
+    SiPostgresql,
+    SiMongodb,
+    SiPrisma,
+    SiTailwindcss,
+    SiGit,
+    SiGithub,
+    SiCloudflare,
+    SiVercel,
+    SiCplusplus,
+    SiPython,
+} from "react-icons/si";
+
+import { FaJava } from "react-icons/fa";
+
+export const technologies = [
+    { name: "React", icon: SiReact },
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "Redux Toolkit", icon: SiRedux },
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "Node.js", icon: SiNodedotjs },
+    { name: "Express.js", icon: SiExpress },
+    { name: "PostgreSQL", icon: SiPostgresql },
+    { name: "MongoDB", icon: SiMongodb },
+    { name: "Prisma ORM", icon: SiPrisma },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "Git", icon: SiGit },
+    { name: "GitHub", icon: SiGithub },
+    { name: "Cloudflare Workers", icon: SiCloudflare },
+    { name: "Vercel", icon: SiVercel },
+    { name: "C++", icon: SiCplusplus },
+    { name: "Python", icon: SiPython },
+    { name: "Java", icon: FaJava },
+];
